@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HCRouterKit_Example' do
+  pod 'HCRouterKit', :path => '../'
+
+  target 'HCRouterKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
