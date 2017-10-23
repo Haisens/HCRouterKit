@@ -9,6 +9,10 @@
 
 @implementation HCRouterKit
 
+/**
+ 路由单利对象
+ 
+ */
 + (instancetype)defaultRouter {
     static HCRouterKit *router;
     static dispatch_once_t onceToken;
@@ -18,6 +22,10 @@
     return router;
 }
 
+/**
+ 根据名称获取controller
+ 
+ */
 + (UIViewController *)getControllerFromString:(NSString *)controllerName {
     if ([controllerName length]) {
         id controller = [NSClassFromString(controllerName) new];
@@ -28,4 +36,6 @@
     }
     return nil;
 }
+
+
 @end

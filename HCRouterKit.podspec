@@ -24,7 +24,7 @@ TODO: 类之间无需#import即可实现跳转，方法调用。减少代码耦�
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'HCRouterKit/Classes/**/*.{h,m,xib}'
+  s.source_files = 'HCRouterKit/*.{h,m}'
   
   # s.resource_bundles = {
   #   'HCRouterKit' => ['HCRouterKit/Assets/*.png']
@@ -32,5 +32,5 @@ TODO: 类之间无需#import即可实现跳转，方法调用。减少代码耦�
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'HCFoundation'
 end
