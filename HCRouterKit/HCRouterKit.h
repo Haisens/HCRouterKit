@@ -20,7 +20,7 @@ typedef void (^HCRouterCompletionBlock)(id _Nullable completionObject);
 /**
  路由执行者回调（A通过路由跳转到B,B返回A时执行的回调。可用于B->A传递数据）
 
- @param FinishedObject 回调数据
+ @param finishedObject 回调数据
  */
 typedef void (^HCRouterFinishedBlock)(id _Nullable finishedObject);
 
