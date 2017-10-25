@@ -70,7 +70,7 @@ BlockSelf(blockSelf);
 
 }];
 ```
-4、注意：如果是有finished回调的，需在被访问的控制器（上述中的HCViewControllerB）中遵循HCRouterKit的协议<HCRouterFinishedProtocol>，并实现回调方法。
+4、注意：如果是有finished回调的，需在被访问的控制器（上述中的HCViewController）中遵循HCRouterKit的协议<HCRouterFinishedProtocol>，并实现回调方法。
 ```ruby
 [self hcrouter_performFinishedBlock:@"我是finished回调"];
 ```
