@@ -325,10 +325,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HCRouterKit_Example/Pods-HCRouterKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HCFoundation/HCFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/HCRouterKit/HCRouterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCRouterKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
