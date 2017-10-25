@@ -19,10 +19,32 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'HCRouterKit'
 ```
+```ruby
+//注册路由scheme
+[[HCRouterKit defaultRouter] registerRouterWithScheme:@"scheme"];
+//注册类名以及快捷类名
+[[HCRouterKit defaultRouter] registerClassQuickName:@"testhost" className:@"class"];
+//注册方法名以及快捷方法名
+[[HCRouterKit defaultRouter] registerSelectorQuickName:@"getvca" selectorName:@"selector"];
+
+BlockSelf(blockSelf);
+[[HCRouterKit defaultRouter] openURL:@"hcrouterkit://testhost/getvcc" parameters:@{@"string":@"yinhaichao"} completion:^(id  _Nullable completionObject) {
+
+    if ([completionObject isKindOfClass:[UIViewController class]]) {
+        [blockSelf presentViewController:completionObject animated:YES completion:^{
+        NSLog(@"\n跳转成功!\n");
+    }];
+    }
+} finished:^(id  _Nullable finishedObject) {
+
+    NSLog(@"我是finished回调的:%@", finishedObject);
+
+}];
+```
 
 ## Author
 
-haisens@163.com, 284353855@qq.com
+haisens@163.com, 殷海超（Groot）
 
 ## License
 

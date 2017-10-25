@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,9 +19,73 @@
                         <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ley-UO-dw5">
+                                <rect key="frame" x="0.0" y="53.5" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hsr-ty-uy9"/>
+                                </constraints>
+                                <state key="normal" title="跳转A（不需参数和返回值）"/>
+                                <connections>
+                                    <action selector="gotoVCA:" destination="whP-gf-Uak" eventType="touchUpInside" id="fTw-Nk-4K0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srE-Dk-tXn">
+                                <rect key="frame" x="0.0" y="137" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jDw-A5-jcw"/>
+                                </constraints>
+                                <state key="normal" title="跳转B（需要参数、不需要返回值）"/>
+                                <connections>
+                                    <action selector="gotoVCB:" destination="whP-gf-Uak" eventType="touchUpInside" id="TBR-59-TUe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-nM-gUj">
+                                <rect key="frame" x="0.0" y="220" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4MJ-Iz-hRY"/>
+                                </constraints>
+                                <state key="normal" title="跳转C（需参数和返回值）"/>
+                                <connections>
+                                    <action selector="gotoVCC:" destination="whP-gf-Uak" eventType="touchUpInside" id="nPF-XE-4Ft"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZr-Nk-fS7">
+                                <rect key="frame" x="0.0" y="303.5" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FCa-K6-dd5"/>
+                                </constraints>
+                                <state key="normal" title="HCTest方法调用"/>
+                                <connections>
+                                    <action selector="test:" destination="whP-gf-Uak" eventType="touchUpInside" id="ZyE-cK-SVR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ley-UO-dw5" secondAttribute="trailing" id="8dj-Im-yx3"/>
+                            <constraint firstAttribute="trailing" secondItem="wZr-Nk-fS7" secondAttribute="trailing" id="BON-al-H3b"/>
+                            <constraint firstItem="srE-Dk-tXn" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" multiplier="1:2" id="D3D-3C-rB9"/>
+                            <constraint firstItem="Ley-UO-dw5" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" multiplier="1:4" id="JPD-4b-mHS"/>
+                            <constraint firstAttribute="trailing" secondItem="nHF-nM-gUj" secondAttribute="trailing" id="Ju2-mZ-MIF"/>
+                            <constraint firstItem="nHF-nM-gUj" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="OPS-mw-iTP"/>
+                            <constraint firstAttribute="trailing" secondItem="srE-Dk-tXn" secondAttribute="trailing" id="Olq-sq-os1"/>
+                            <constraint firstItem="nHF-nM-gUj" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="Ool-fm-gkK"/>
+                            <constraint firstItem="Ley-UO-dw5" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="WRF-Sd-wur"/>
+                            <constraint firstItem="nHF-nM-gUj" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" multiplier="3:4" id="dhQ-Mz-Xr0"/>
+                            <constraint firstItem="Ley-UO-dw5" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="dir-Im-geE"/>
+                            <constraint firstItem="wZr-Nk-fS7" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="eky-sf-VlW"/>
+                            <constraint firstItem="srE-Dk-tXn" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="uDg-fB-Uwn"/>
+                            <constraint firstItem="wZr-Nk-fS7" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="vLf-WP-Cb5"/>
+                            <constraint firstItem="srE-Dk-tXn" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="vj4-VO-YFz"/>
+                            <constraint firstItem="wZr-Nk-fS7" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="zdV-pa-HYB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

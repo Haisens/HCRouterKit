@@ -120,7 +120,7 @@
  @param url 路由地址 scheme://classQuickName/selectorQuickName/
  @param parameters 参数
  */
-- (void)openURL:(NSString *)url parameters:(id _Nullable)parameters {
+- (void)openURL:(NSString *)url parameters:(NSDictionary *_Nullable)parameters {
     [self openURL:url parameters:parameters completion:nil finished:nil];
 }
 
@@ -132,7 +132,7 @@
  @param completion 回调数据
  */
 - (void)openURL:(NSString *)url
-     parameters:(id _Nullable)parameters
+     parameters:(NSDictionary *_Nullable)parameters
      completion:(HCRouterCompletionBlock _Nullable)completion {
     [self openURL:url parameters:parameters completion:completion finished:nil];
 }
@@ -146,7 +146,7 @@
  @param finished 路由执行者回调（A通过路由跳转到B,B返回A时执行的回调。可用于B->A传递数据）
  */
 - (void)openURL:(NSString *)url
-     parameters:(id _Nullable)parameters
+     parameters:(NSDictionary *_Nullable)parameters
      completion:(HCRouterCompletionBlock _Nullable)completion
        finished:(HCRouterFinishedBlock _Nullable)finished {
     
@@ -260,7 +260,7 @@
     
     if (![target respondsToSelector:selector]) {
         if (error) {
-            *error = [NSError errorWithDomain:[NSString stringWithFormat:@"【%@】 Selector不正确!", className]
+            *error = [NSError errorWithDomain:[NSString stringWithFormat:@"【%@】 Selector不正确!", selectorName]
                                          code:404
                                      userInfo:nil];
         }

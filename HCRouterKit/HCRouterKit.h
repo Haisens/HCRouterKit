@@ -22,7 +22,7 @@ typedef void (^HCRouterCompletionBlock)(id _Nullable completionObject);
 
  @param FinishedObject 回调数据
  */
-typedef void (^HCRouterFinishedBlock)(id _Nullable FinishedObject);
+typedef void (^HCRouterFinishedBlock)(id _Nullable finishedObject);
 
 /**
  回调协议
@@ -101,7 +101,7 @@ typedef void (^HCRouterFinishedBlock)(id _Nullable FinishedObject);
  @param url 路由地址 scheme://classQuickName/selectorQuickName/
  @param parameters 参数
  */
-- (void)openURL:(NSString *)url parameters:(id _Nullable)parameters;
+- (void)openURL:(NSString *)url parameters:(NSDictionary *_Nullable)parameters;
 
 /**
  执行路由跳转
@@ -111,7 +111,7 @@ typedef void (^HCRouterFinishedBlock)(id _Nullable FinishedObject);
  @param completion 回调数据
  */
 - (void)openURL:(NSString *)url
-     parameters:(id _Nullable)parameters
+     parameters:(NSDictionary *_Nullable)parameters
      completion:(HCRouterCompletionBlock _Nullable)completion;
 
 /**
@@ -123,7 +123,7 @@ typedef void (^HCRouterFinishedBlock)(id _Nullable FinishedObject);
  @param finished 路由执行者回调（A通过路由跳转到B,B返回A时执行的回调。可用于B->A传递数据）
  */
 - (void)openURL:(NSString *)url
-     parameters:(id _Nullable)parameters
+     parameters:(NSDictionary *_Nullable)parameters
      completion:(HCRouterCompletionBlock _Nullable)completion
        finished:(HCRouterFinishedBlock _Nullable)finished;
 @end
