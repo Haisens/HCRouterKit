@@ -12,6 +12,7 @@
 @interface HCViewControllerC ()<HCRouterFinishedProtocol>
 {
     NSDictionary *_strDic;
+    
 }
 @end
 

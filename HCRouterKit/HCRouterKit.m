@@ -36,8 +36,7 @@
  初始化
 
  */
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _HCRouterClassList = [NSMutableDictionary dictionary];
