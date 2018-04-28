@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HCRouterKit'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '简单易用的路由组件.'
 
   s.description      = <<-DESC
