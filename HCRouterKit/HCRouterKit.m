@@ -317,7 +317,7 @@ static const char HCRouterFinishedBlockRuntimeKey;
 
  @param finishedObject 回调数据
  */
-- (void)hcrouter_performFinishedBlock:(id)finishedObject {
+- (void)hcrouter_performFinishedBlock:(id _Nullable)finishedObject {
     HCRouterFinishedBlock finished = objc_getAssociatedObject(self, &HCRouterFinishedBlockRuntimeKey);
     if (finished) {
         finished(finishedObject);

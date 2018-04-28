@@ -35,7 +35,7 @@ typedef void (^HCRouterFinishedBlock)(id _Nullable finishedObject);
  
  @param finishedObject 回调数据
  */
-- (void)hcrouter_performFinishedBlock:(id)finishedObject;
+- (void)hcrouter_performFinishedBlock:(id _Nullable)finishedObject;
 
 @end
 
