@@ -75,8 +75,7 @@ platform :ios do
 
   # 8、pod repo push XXX  xxxx.podspec
     pod_push(
-		path: podspecPath, 
-		repo: repoName, 
+		path: podspecPath,  
 		allow_warnings:true
 	 )
  
