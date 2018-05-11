@@ -87,7 +87,7 @@
 		C7FDC0821FA05AEF009FAC69 /* HCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTest.h; sourceTree = "<group>"; };
 		C7FDC0831FA05AEF009FAC69 /* HCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTest.m; sourceTree = "<group>"; };
 		EFFF64BEE266DAC15C0A66C2 /* Pods-HCRouterKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCRouterKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCRouterKit_Tests/Pods-HCRouterKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F921839BA381ACF04E3E5174 /* HCRouterKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HCRouterKit.podspec; path = ../HCRouterKit.podspec; sourceTree = "<group>"; };
+		F921839BA381ACF04E3E5174 /* HCRouterKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HCRouterKit.podspec; path = ../HCRouterKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

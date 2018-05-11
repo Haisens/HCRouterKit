@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HCRouterKit'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = '简单易用的路由组件.'
 
   s.description      = <<-DESC
@@ -30,7 +30,7 @@ TODO: 类之间无需#import即可实现跳转，方法调用。减少代码耦�
   #   'HCRouterKit' => ['HCRouterKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Pod/Classes/**/HCRouterKit.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'HCFoundation'
 end
