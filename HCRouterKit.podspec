@@ -30,7 +30,7 @@ TODO: 类之间无需#import即可实现跳转，方法调用。减少代码耦�
   #   'HCRouterKit' => ['HCRouterKit/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/Classes/**/HCRouterKit.h'
+  s.public_header_files = 'HCRouterKit/HCRouterKit.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'HCFoundation'
 end
